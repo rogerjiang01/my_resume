@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站練習</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #about,
+        #skills,
+        #gallery {
+            padding: 20px 0;
+
+        }
+
+        /* About */
+
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 218, 155);
+        }
+
+        .photo {
+            width: 45%;
+            background-color: lightsalmon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .description {
+            width: 45%;
+            background-color: lightseagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        /* Skills */
+
+        .container-skills {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            /* height: 300px; */
+            background-color: rgb(255, 218, 155);
+            /* padding: 20px; bad */
+        }
+
+        .shortcut {
+            display: flex;
+            justify-content: space-between;
+            /* height: 100%; */
+        }
+
+        .skill {
+            background-color: lightskyblue;
+            width: 30%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        /* Gallery */
+        .container-gallery {
+            background-color: rgb(255, 218, 155);
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            /* height: 300px; */
+            /* padding: 20px;  bad */
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .intro li {
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 300px;
+            /* margin-bottom: 30px; */
+            margin: 20px;
+        }
+
+        .intro li:nth-child(odd) {
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* footer */
+
+        footer {
+            background-color: #333;
+            width: 100%;
+        }
+
+        footer p {
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px 0;
+            margin: 10px;
+        }
+
+        @media screen and (max-width:500px) {
+
+            .photo,
+            .description,
+            .skill {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .container,
+            .shortcut {
+                flex-wrap: wrap;
+            }
+
+            .intro li {
+                width: 49%;
+                margin: 0;
+            }
+
+            .intro li:nth-child(1) {
+                order: 1;
+            }
+
+            .intro li:nth-child(2) {
+                order: 2;
+            }
+
+            .intro li:nth-child(3) {
+                order: 4;
+            }
+
+            .intro li:nth-child(4) {
+                order: 3;
+            }
+
+            .intro li:nth-child(5) {
+                order: 5;
+            }
+
+            .intro li:nth-child(6) {
+                order: 6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="banner"></div>
+
+    <section id="about">
+        <div class="container">
+            <div class="photo">Photo</div>
+            <div class="description">Description</div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container-skills">
+            <ul class="shortcut">
+                <li class="skill">skill1</li>
+                <li class="skill">skill2</li>
+                <li class="skill">skill3</li>
+            </ul>
+        </div>
+    </section>
+    <section id="gallery">
+        <div class="container-gallery">
+            <ul class="intro">
+                <li>img</li>
+                <li>text</li>
+                <li>img</li>
+                <li>text</li>
+                <li>img</li>
+                <li>text</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>copywrite@ccc.com</p>
+    </footer>
+</body>
+
+</html>

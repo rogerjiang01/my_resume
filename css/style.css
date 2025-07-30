@@ -1,0 +1,392 @@
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Mukta:wght@300&display=swap');
+
+        /* font-family: 'Mukta', sans-serif; 
+            font-family: 'Dosis';
+        */
+        /* 電腦與平板上應用的樣式 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        .p_font {
+            font-family: 'Mukta', 'noto sans TC';
+            color: #333;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        h5 {
+            font-size: .875rem;
+        }
+
+        h6 {
+            font-size: .75rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        body {
+            background-color: rgb(237, 237, 237);
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        /* ================
+    Header 
+================ */
+        header {
+            width: 100%;
+            padding-top: 10px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 15px #d4d4d4;
+        }
+
+        header .container {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-left: 60px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .navbar {
+            width: 50%;
+            margin: 0 60px;
+        }
+
+        .navbar ol {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .navbar li {
+            list-style: none;
+            height: 100%;
+            border-bottom: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            height: 100%;
+            text-align: center;
+            color: #292F36;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* ================
+    Header END
+================ */
+
+
+        /* --------------Section Main-------------- */
+        /* #Main {
+            width: 100%;
+            height: 900px;
+            background-color: whitesmoke;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+
+        .intro {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .intro .img {
+            width: 250px;
+            height: auto;
+            padding-right: 50px;
+        }
+
+        .intro img {
+            width: 100%;
+            height: auto;
+        }
+
+        .resume {
+            background-color: blanchedalmond;
+            width: 400px;
+            height: 600px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .resume>div {
+            background-color: lightseagreen;
+            width: 100%;
+            height: 30%;
+
+        } */
+
+        /* --------------Section Main End-------------- */
+        /* ================================
+                    Main  START
+        ================================ */
+
+        #Main {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #Main .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .circle1,
+        .circle2,
+        .shape,
+        .triangle {
+            opacity: 0;
+            /* 預設透明，防止動畫開始前閃爍 */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            /* 居中對齊 */
+        }
+
+        .circle1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: #CDA274;
+            top: -10%;
+            left: 60%;
+            border-radius: 50%;
+            z-index: -1;
+
+            animation-name: spinScaleIn;
+            animation-duration: 1.2s;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+        }
+
+        .circle2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #f5d2af;
+            bottom: 5%;
+            left: 10%;
+            border-radius: 50%;
+            z-index: -1;
+
+            animation-name: spinScaleIn;
+            animation-duration: 1.0s;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 30%;
+            border-left: 257px solid transparent;
+            border-right: 257px solid transparent;
+            border-bottom: 405px solid rgb(245, 151, 93);
+            position: absolute;
+            z-index: -1;
+
+            animation-name: spinScaleIn;
+            animation-duration: 1.8s;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            animation-fill-mode: forwards;
+            animation-delay: 0.1s;
+        }
+
+        /* ================================
+                    Main  END  
+        ================================ */
+
+
+        /* ================
+    RWD 手機版 (700px 以下)
+================ */
+        @media screen and (max-width: 699px) {
+
+            header .container {
+                margin: 0;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                margin-left: 30px;
+                /* 手機版 logo 左邊距 */
+            }
+
+            /* 漢堡選單在手機版顯示 */
+            .menu {
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-color: #666;
+                margin-right: 30px;
+                margin-bottom: 10px;
+                position: relative;
+            }
+
+            .menu::after {
+                content: "";
+                position: absolute;
+                top: 1em;
+                left: .8em;
+                width: 1.5em;
+                height: 0.2em;
+                border-top: 0.6rem double white;
+                border-bottom: 0.2rem solid white;
+            }
+
+            /* 導覽列在手機版佔滿寬度 */
+            .navbar {
+                width: 100%;
+                margin: 0;
+            }
+
+            .navbar ol {
+                display: flex;
+                flex-direction: column;
+                /* 手機版導覽項目垂直排列 */
+            }
+
+            .navbar li {
+                border-bottom: 1px solid #333;
+                /* 手機版底部邊框 */
+            }
+
+            .navbar a {
+                background-color: rgb(248, 248, 248);
+                /* 手機版連結背景色 */
+            }
+        }
+
+        /* 手機 */
+        @media screen and (max-width: 500px) {
+            .menu {
+                display: block;
+            }
+
+            header {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .logo {
+                height: 100%;
+            }
+
+
+            .navbar,
+            ol,
+            li,
+            li a {
+                height: 100%;
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            ol {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            ol li {
+                border-bottom: 1px solid #333;
+            }
+
+            ol a {
+                width: 100%;
+            }
+        }
+
+        /* --------------Header End-------------- */
+
+
+        @keyframes spinScaleIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) rotate(-90deg);
+                /* 從縮小 80% 並逆時針旋轉 90 度開始 */
+            }
+
+            70% {
+                opacity: 1;
+                transform: scale(1.05) rotate(5deg);
+                /* 稍微放大並輕微旋轉 */
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                /* 結束在原始大小和無旋轉狀態 */
+            }
+        }
