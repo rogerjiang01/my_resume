@@ -7,6 +7,7 @@
         * {
             margin: 0;
             padding: 0;
+            list-style-type: none;
         }
 
         h1,
@@ -34,7 +35,7 @@
         }
 
         h4 {
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
 
         h5 {
@@ -49,6 +50,13 @@
             font-size: 1rem;
         }
 
+        .deco_font {
+            font-family: 'Mukta', 'noto sans TC';
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #4D5053;
+        }
+
         body {
             background-color: rgb(237, 237, 237);
             margin: 0;
@@ -56,20 +64,27 @@
             font-size: 14px;
         }
 
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
         /* ================
-    Header 
-================ */
+                Header 
+        ================ */
         header {
             width: 100%;
             padding-top: 10px;
             position: relative;
             z-index: 1;
             box-shadow: 0 0 15px #d4d4d4;
+            background-color: rgb(237, 237, 237);
         }
 
         header .container {
             width: 100%;
-            margin: auto;
+            max-width: none;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -88,6 +103,7 @@
         .navbar {
             width: 50%;
             margin: 0 60px;
+
         }
 
         .navbar ol {
@@ -98,7 +114,6 @@
         }
 
         .navbar li {
-            list-style: none;
             height: 100%;
             border-bottom: 0;
         }
@@ -186,6 +201,8 @@
             display: flex;
             align-items: center;
             position: relative;
+            overflow: hidden;
+            /*藏起來*/
         }
 
         #Main .container {
@@ -199,7 +216,6 @@
 
         .circle1,
         .circle2,
-        .shape,
         .triangle {
             opacity: 0;
             /* 預設透明，防止動畫開始前閃爍 */
@@ -230,7 +246,7 @@
             width: 200px;
             height: 200px;
             background-color: #f5d2af;
-            bottom: 5%;
+            bottom: 30%;
             left: 10%;
             border-radius: 50%;
             z-index: -1;
@@ -263,12 +279,356 @@
         /* ================================
                     Main  END  
         ================================ */
+        /* ================================
+                    Introduce  START
+            ================================ */
+        #Introduce {
+            width: 100%;
+        }
+
+        #Introduce .container {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: flex-start; */
+            padding: 60px 0;
+        }
+
+        .img-block {
+            width: 400px;
+            height: 600px;
+            background-color: lightsalmon;
+        }
+
+        .resume {
+            width: 50%;
+            padding: 30px;
+        }
+
+        .resume h2,
+        .resume h3 {
+            padding: 16px 0;
+        }
 
 
+        .exp_list li {
+            background-color: rgb(234, 226, 220);
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .exp_list h4 {
+            margin-bottom: 8px;
+        }
+
+        .skills-list li {
+            /* width: 100%;
+            height: 40px; */
+            display: flex;
+            justify-content: center;
+            /* flex-direction: ; */
+            align-items: center;
+        }
+
+        .skill-name {
+            /* display: block; */
+            width: 100px;
+            height: 50px;
+            text-align: right;
+            margin-right: 30px;
+            line-height: 50px;
+        }
+
+        .skill-bar {
+            background-color: #F0EAE4;
+            height: 18px;
+            border-radius: 9px;
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-level {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 9px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 0.9rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            transition: width 0.5s ease-out;
+
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+
+        /* HTML */
+        .skill-html {
+            background: linear-gradient(to right, #DDA35D, #BC8F6D);
+            /* 大地色系漸變 */
+            animation-name: progress-html;
+            animation-delay: 0.2s;
+            /* 延遲 0.2 秒 */
+        }
+
+        /* CSS */
+        .skill-css {
+            background: linear-gradient(to right, #CDA274, #C09A6C);
+            /* 大地色系漸變 */
+            animation-name: progress-css;
+            animation-delay: 0.4s;
+            /* 延遲 0.4 秒 */
+        }
+
+        /* JavaScript */
+        .skill-js {
+            background: linear-gradient(to right, #BC8F6D, #AD7C5B);
+            /* 大地色系漸變 */
+            animation-name: progress-js;
+            animation-delay: 0.6s;
+            /* 延遲 0.6 秒 */
+        }
+
+        /* Photoshop */
+        .skill-abc {
+            /* 保持原來的 class 名稱 */
+            background: linear-gradient(to right, #DDA35D, #CDA274);
+            /* 大地色系漸變 */
+            animation-name: progress-abc;
+            animation-delay: 0.8s;
+            /* 延遲 0.8 秒 */
+        }
+
+        /* Illustrator */
+        .skill-elkkk {
+            /* 保持原來的 class 名稱 */
+            background: linear-gradient(to right, #BC8F6D, #DDA35D);
+            /* 大地色系漸變 */
+            animation-name: progress-elkkk;
+            animation-delay: 1.0s;
+            /* 延遲 1.0 秒 */
+        }
+
+        /* Git (新增的 Git 技能，假設使用 .skill-git class) */
+        .skill-git {
+            background: linear-gradient(to right, #CDA274, #AD7C5B);
+            /* 大地色系漸變 */
+            animation-name: progress-git;
+            /* 新的動畫名稱 */
+            animation-delay: 1.2s;
+            /* 延遲 1.2 秒 */
+        }
+
+        @keyframes progress-html {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 90%;
+            }
+        }
+
+        @keyframes progress-css {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 80%;
+            }
+        }
+
+        @keyframes progress-js {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 70%;
+            }
+        }
+
+        @keyframes progress-abc {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 70%;
+            }
+
+        }
+
+        @keyframes progress-elkkk {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 85%;
+            }
+
+        }
+
+        @keyframes progress-git {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 80%;
+            }
+        }
+
+        /* ================================
+                    Introduce  END  
+            ================================ */
+
+        /* ================================
+                        Work  START
+            ================================ */
+        #Work {
+            background-color: #fff;
+        }
+
+        #Work .container {
+            padding: 60px 0;
+        }
+
+        #Work h2 {
+            padding: 30px 0;
+        }
+
+        .work-list li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 72px;
+            margin: 30px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #d4d4d4;
+            flex-wrap: nowrap;
+        }
+
+        .work-period {
+            font-size: 1.3rem;
+            /* line-height: 72px; */
+            width: 180px;
+            flex-shrink: 0;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #8b8b8b;
+            margin: 30px;
+            flex-shrink: 0;
+        }
+
+        .job-title {
+            flex-grow: 1;
+        }
+
+        /* ================================
+                        Work  END  
+            ================================ */
+        /* ================================
+                    Portfolio  START
+            ================================ */
+        #Portfolio {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        #Portfolio h2 {
+            padding: 8px 0;
+        }
+
+        #Portfolio .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+            padding: 60px 0;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease-in-out;
+
+
+        }
+
+        .side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: transform 0.4s ease-in-out;
+            background-color: #6cc0ae;
+        }
+
+
+        .card:nth-child(3) {
+            grid-area: 1 / 3 / 2 / 5;
+        }
+
+        .card:nth-child(8) {
+            grid-area: 2 / 4 / 2 / 6;
+        }
+
+        .card:nth-child(6) {
+            grid-area: 2 / 2 / 4 / 4;
+            height: 370px;
+        }
+
+        .side img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        .back {
+            display: flex;
+            background: #c1a27a;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            transform: rotateY(180deg);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .card:hover .side {
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .back {
+            transform: rotateY(0deg);
+        }
+
+
+        /* ================================
+                    Portfolio  END  
+            ================================ */
         /* ================
-    RWD 手機版 (700px 以下)
-================ */
-        @media screen and (max-width: 699px) {
+            RWD header
+        ================ */
+        @media screen and (max-width: 700px) {
 
             header .container {
                 margin: 0;
@@ -323,52 +683,96 @@
                 background-color: rgb(248, 248, 248);
                 /* 手機版連結背景色 */
             }
+
+            /* ================================
+                        Introduce  START
+            ================================ */
+
+            #Introduce .container {
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .resume {
+                padding: 30px 0;
+                width: 90%;
+            }
+
+            .skills-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skill-name {
+                width: auto;
+                text-align: left;
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .skill-bar {
+                width: 100%;
+            }
+
+
+            /* ================================
+                        Introduce  END  
+            ================================ */
+            /* ================================
+                        Work  START
+            ================================ */
+
+            .work-list li {
+                flex-wrap: wrap;
+                height: auto;
+                /* align-items: flex-start; */
+
+            }
+
+            .work-period {
+                width: 100%;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            .company-logo {
+                margin: 0;
+                margin-right: 16px;
+            }
+
+            /* ================================
+                        Work  END  
+            ================================ */
+            /* ================================
+                        Portfolio  START
+            ================================ */
+            #Portfolio .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                width: 48%;
+                height: 200px;
+                max-height: 100%;
+                margin-bottom: 8px;
+            }
+
+            .card:nth-child(6) {
+                height: auto;
+            }
+
+            /* ================================
+                        Portfolio  END  
+            ================================ */
+
         }
 
         /* 手機 */
-        @media screen and (max-width: 500px) {
-            .menu {
-                display: block;
-            }
+        @media screen and (max-width: 500px) {}
 
-            header {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-            }
-
-            .logo {
-                height: 100%;
-            }
-
-
-            .navbar,
-            ol,
-            li,
-            li a {
-                height: 100%;
-            }
-
-            .navbar {
-                width: 100%;
-            }
-
-            ol {
-                display: flex;
-                flex-direction: column;
-
-            }
-
-            ol li {
-                border-bottom: 1px solid #333;
-            }
-
-            ol a {
-                width: 100%;
-            }
-        }
-
-        /* --------------Header End-------------- */
 
 
         @keyframes spinScaleIn {
