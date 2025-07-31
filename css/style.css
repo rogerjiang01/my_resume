@@ -625,6 +625,39 @@
         /* ================================
                     Portfolio  END  
             ================================ */
+
+        #Contact {
+            width: 100%;
+            height: 800px;
+            background-image: linear-gradient(to right bottom, #f2a86d, #f2a46c, #f29f6c, #f29b6c, #f2976c, #f2926b, #f38c6a, #f38769, #f47f66, #f47764, #f56f63, #f56662);
+        }
+        #Contact .container .row{
+            padding: 60px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+
+
+        footer {
+            width: 100%;
+            height: 60px;
+            background-color: #292F36;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
         /* ================
             RWD header
         ================ */
